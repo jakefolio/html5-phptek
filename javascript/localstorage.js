@@ -2,7 +2,10 @@
 HTTP vs. HTTPS localstorage - store seperately (including incognito for chrome)
 No default expiration.
 Only support strings as values
+Sessionstorage extends Storage just like localstorage, but presists like a session.
+Sessionstorage only survives crash recovery in FF at the moment.
 SUPPORT: All modern browsers and IE8+
+POLYFILL: Use lawnchair for storage.
 */
 
 // Check if localStorage is available
@@ -28,4 +31,7 @@ if (typeof window.localStorage == 'object' && window.localStorage != null) {
 
 	// Retrieve my Object
 	newobj = JSON.parse(store.myObject);
+
+	// Delete all of localstorage
+	store.clear();
 }
