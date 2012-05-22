@@ -1,1 +1,14 @@
-<input type="color" name="primary_color">
+<input type="color" 
+       name="primary_color"
+       placeholder="#FFFFFF"
+       pattern="#[a-fA-f0-9]{3}|#[a-fA-f0-9]{6}">
+<style>
+  input[type="color"]:invalid {
+    border: 3px solid #f00;
+    color: #f00;
+  }
+  input[type="color"]:valid {
+    border: 3px solid green;
+    color: green;
+  }
+</style>

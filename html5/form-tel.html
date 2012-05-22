@@ -1,0 +1,15 @@
+<input type="tel"
+       name="telephone"
+       placeholder="(123)456-7890"
+       pattern="(\d{3})\d{3}\-\d{4}" />
+       
+<style>
+  input[type="tel"]:invalid {
+    border: 3px solid #f00;
+    color: #f00;
+  }
+  input[type="tel"]:valid {
+    border: 3px solid green;
+    color: green;
+  }
+</style>

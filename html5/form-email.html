@@ -1,0 +1,14 @@
+<input type="email"
+       name="email"
+       placeholder="you@domain.com"
+       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}">
+<style>
+  input[type="email"]:invalid {
+    border: 3px solid #f00;
+    color: #f00;
+  }
+  input[type="email"]:valid {
+    border: 3px solid green;
+    color: green;
+  }
+</style>

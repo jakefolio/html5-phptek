@@ -1,0 +1,34 @@
+<div class="current-budget"></div><br>
+<input type="range"
+       name="budget"
+       value="3"
+       min="0"
+       max="5"
+       step="1"
+       id="budget" />
+
+<style>
+input[type="number"]:out-of-range {
+  border: 3px solid #f00;
+  color: #f00;
+}
+.current-budget {
+  background: #ccc;
+  display: inline-block;
+  padding: 4px 8px;
+  text-align:center;
+}
+</style>
+
+<script>
+  var budget = document.getElementById('budget');
+  var currentBudget = document.getElementsByClassName('current-budget')[0];
+  
+  // initial value
+  currentBudget.innerText = budget.value;
+  
+  // Watch for value change
+  budget.addEventListener('change', function(e) {
+    currentBudget.innerText = budget.value;
+  });
+</script>

@@ -1,0 +1,14 @@
+<input type="url" 
+       name="site" 
+       placeholder="http://mydomain.com/"
+       pattern="(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.\/]*" />
+<style>
+  input[type="url"]:invalid {
+    border: 3px solid #f00;
+    color: #f00;
+  }
+  input[type="url"]:valid {
+    border: 3px solid green;
+    color: green;
+  }
+</style>
