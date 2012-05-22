@@ -1,0 +1,9 @@
+<?php
+	if ($_POST) {
+		$photos = $_FILES['photos'];
+	}
+?>
+<form method="post">
+	<!-- ACCEPTS: image/*, audio/*, video/* and application/* -->
+	<input name="photos[]" type="file" accept="image/*" multiple>
+</form>

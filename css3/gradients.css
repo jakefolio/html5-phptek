@@ -1,0 +1,148 @@
+/* LINEAR GRADIENTS
+*************************/
+.spectrum {
+	background: -webkit-linear-gradient(left,
+		red,
+		blue,
+		green,
+		yellow,
+		orange
+	);
+}
+.spectrum-solid {
+	background: -webkit-linear-gradient(left,
+		red 20%,
+		blue 20%,
+		blue 40%,
+		green 40%,
+		green 60%,
+		yellow 60%,
+		yellow 80%,
+		orange 80%
+	);
+}
+.stripes {
+	background-color: #73D4C9;
+	background-image: -webkit-repeating-linear-gradient(left, 
+		transparent, 
+		transparent 35px, 
+		rgba(255, 255, 255, .5) 35px, 
+		rgba(255, 255, 255, .5) 70px
+	);
+	
+}
+.square-repeat {
+	background-color: #73D4C9;
+	background-image: -webkit-linear-gradient(45deg,
+ 		transparent 50%,
+ 		#5EBEB4 50%
+ 	);
+ 	background-image: -moz-linear-gradient(45deg,
+ 		transparent 50%,
+ 		#5EBEB4 50%
+ 	);
+	background-size: 4px 4px;
+}
+.stripes-repeat-diag {
+	background: -webkit-repeating-linear-gradient(-45deg, #222, #222 40px, #444 40px, #444 80px);
+}
+/* Argyle: http://lea.verou.me/css3patterns/#diagonal-stripes */
+.argyle {
+	background-color: #6d695c;
+	background-image:
+	  -webkit-repeating-linear-gradient(-30deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+	  -webkit-repeating-linear-gradient(30deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+	  -webkit-linear-gradient(30deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+	  -webkit-linear-gradient(-30deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+	background-size: 70px 120px;
+}
+
+/* RADIAL GRADIENTS
+*************************/
+.radial {
+	background-color: #73D4C9;
+	background-image: -webkit-radial-gradient(30% 30%, 
+	  circle, 
+	  white, 
+	  #73D4C9 40%
+	);
+}
+.circle {
+	background-color: #000;
+	background-image: -webkit-radial-gradient(
+		center center,
+		circle,
+		#fff 20px,
+		transparent 20px
+	);
+}
+.circle-repeat {
+	background-color: silver;
+	background-image: 
+		-webkit-radial-gradient(100% 150%, circle, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+		-webkit-radial-gradient(0    150%, circle, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+		-webkit-radial-gradient(50%  100%, circle, white 10%, silver 11%, silver 23%, white 24%, white 30%, silver 31%, silver 43%, white 44%, white 50%, silver 51%, silver 63%, white 64%, white 71%, transparent 71%, transparent),
+		-webkit-radial-gradient(100% 50%,  circle, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent),
+		-webkit-radial-gradient(0    50%,  circle, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent);
+	background-size: 100px 50px;	
+}
+
+
+
+/* MISC
+*************************/
+html { min-height: 100%; }
+body {
+	margin: 0;
+	min-height: 100%;
+}
+nav {
+	background: rgba(0,0,0,0.5);
+	font-size: 14px;
+	padding: 4px 2px;
+	position: fixed;
+		top: 0;
+		left: 0;
+	text-align: center;
+	width: 100%;
+}
+nav ul {
+	display: inline-block;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+}
+nav li {
+	display: inline-block;
+	float: left;
+	margin: 0 4px;
+}
+nav a {
+	background: -webkit-linear-gradient(top,
+		#CCC,
+		#f2f2f2
+	);
+	border: 1px solid #333;
+	border-radius: 5px;
+	color: #333;
+	display: block;
+	padding: 5px 10px;
+	text-decoration: none;
+	text-shadow: 1px 0 0 #CCC;
+	text-transform: uppercase;
+}
+nav a:hover {
+	background: -webkit-linear-gradient(top,
+		#acbfe3,
+		#f2f2f2
+	);
+}
+nav a.selected {
+	background: -webkit-linear-gradient(top,
+		#f78e12,
+		#e7580a
+	);
+	color: #fff;
+	text-shadow: 1px 0 0 #666;
+}

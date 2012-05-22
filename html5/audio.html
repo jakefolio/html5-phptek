@@ -1,0 +1,54 @@
+
+<audio id="nyan-player" autoplay controls loop preload>
+	<source src="audio/nyan-cat.mp3" type="audio/mp3"></source>
+	<!-- Flash fallback goes here -->
+</audio>
+<nav>
+	<button id="media-toggleControls">Hide Controls</button>
+	<button id="media-togglePlay">Pause</button>
+	<button id="media-rewind">Rewind</button>
+	<button id="media-fastForward">Fast Forward</button>
+</nav>
+<script>
+	var player = document.getElementById('nyan-player');
+	/*
+	Available Events: canplay, canplaythrough, playing, waiting, loadedmetadata, loadeddata
+	*/
+	player.addEventListener('canplay', function() {
+		this.volume = 0.7;
+		this.play();
+	});
+
+	function rewind() {
+		player.currentTime -= 15;
+	}
+
+	function fastForward() {
+		player.currentTime += 15;
+	}
+	function togglePlay(e) {
+		if (player.readyState <= 1)
+			return false;
+		if(player.paused) {
+			player.play();
+			e.target.innerText = 'Pause';
+		} else {
+			player.pause();
+			e.target.innerText = 'Play';
+		}
+	}
+	function toggleControls(e) {
+		if (player.hasAttribute('controls')) {
+			player.removeAttribute('controls');
+			e.target.innerText = 'Show Controls';
+		} else {
+			player.setAttribute('controls');
+			e.target.innerText = 'Hide Controls';
+		}
+	}
+	document.getElementById('media-rewind').addEventListener('click', function() { rewind(); });
+	document.getElementById('media-fastForward').addEventListener('click', function() { fastForward(); });
+	document.getElementById('media-toggleControls').addEventListener('click', function(e) { toggleControls(e); });
+	document.getElementById('media-togglePlay').addEventListener('click', function(e) { togglePlay(e); });
+
+</script>
