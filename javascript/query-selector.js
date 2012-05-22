@@ -10,7 +10,7 @@ var items = document.querySelectorAll('.menu li');
 
 // Sub Items of the first menu item
 var subItems = items[0].querySelectorAll('li');
-// jQuery version: $('.menu li').find('li')
+ jQuery version: $('.menu li').find('li');
 
 // Find the latest tweet
 var latestTweet = document.querySelector('#latest-tweet');

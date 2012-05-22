@@ -14,6 +14,9 @@ CLOSED = 3
 if (window.WebSocket) {
 	// Supported
 	var ws = new WebSocket('ws://html5rocks.websocket.org/echo');
+	
+	// Show current Ready State
+	console.log(ws.readyState);
 
 	// When the connection is open, send some data to the server
 	ws.onopen = function () {

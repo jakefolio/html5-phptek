@@ -16,7 +16,7 @@ if (typeof window.localStorage == 'object' && window.localStorage != null) {
 	var newObj;
 
 	try {
-		store.setItem('myKey', 'value');
+		store.setItem('cow', 'moo');
 		store['myObject'] = JSON.stringify(myObject);
 	} catch(e) {
 		if (e == QUOTA_EXCEEDED_ERR) {
@@ -25,12 +25,14 @@ if (typeof window.localStorage == 'object' && window.localStorage != null) {
 	}
 
 	// Change status text
-	// status.innerText = store.getItem('myKey');
-	// status.innerText = store['myKey'];
-	status.innerText = store.myKey;
+	status.innerText = store.getItem('cow');
+	status.innerText = store['cow'];
+	status.innerText = store.cow;
 
 	// Retrieve my Object
 	newobj = JSON.parse(store.myObject);
+	
+	delete store['cow'];
 
 	// Delete all of localstorage
 	store.clear();
