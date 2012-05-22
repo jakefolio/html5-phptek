@@ -6,15 +6,18 @@ enableHighAccuracy = Requests a more precise location (can cause faster battery 
 
 if (navigator.geolocation) {
   var geoloc = navigator.geolocation;
+  var position;
   
 	var myPosition = geoloc.getCurrentPosition(function(pos) {
-		return [pos.coords.latitude, pos.coords.longitude];
+		position = [pos.coords.latitude, pos.coords.longitude];
+		console.log(position);
 	}, errorHandler);
 
 	var geolocWatch = geoloc.watchPosition(function(pos) {
 			// Successfully changed position
-			myPosition = [pos.coords.latitude, pos.coords.longitude];
-		} errorHandler, 
+			position = [pos.coords.latitude, pos.coords.longitude];
+			console.log(position);
+		}, errorHandler, 
 		// Options
 		{ 
 		  enableHighAccuracy: true, 
@@ -30,4 +33,5 @@ if (navigator.geolocation) {
 
 } else {
 	// Geolocation not supported
+	console.log('Not Supported');
 }
