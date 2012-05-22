@@ -1,0 +1,47 @@
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(45deg);
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+    -webkit-animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    -webkit-animation-timing-function: ease-in-out;
+  } 
+}
+
+@-webkit-keyframes bounce {
+  from, to {
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 220px;
+    -webkit-animation-timing-function: ease-in;
+  } 
+}
+
+.ball {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  -webkit-border-radius: 75px;
+  -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  -webkit-animation: bounce 5s 1s 5 alternate,
+                     spin 2s infinite alternate;
+}
+.ball:hover {
+  -webkit-animation-play-state: paused;
+}
+.ball:after {
+  border-color: red transparent green transparent;
+  border-style: solid;
+  border-width: 75px;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  -webkit-border-radius: 75px;
+}

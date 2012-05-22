@@ -1,0 +1,25 @@
+@media print {
+  h1 { color: #000; }
+  h2 { color: #333; }
+  h3 { color: #666; }
+  .sidebar { display: none; }
+}
+@media -webkit-pixel-ratio: 2 {
+  /* Style adjustments for retina display */
+  h1 {
+    background-image: url(logo-highres.png);
+    background-size: 300px 85px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over */
+}
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over */
+}
+
+@media only screen and (device-width: 320px) and (orientation: portrait) {
+ /* Style adjjustments for smartphones in portrait */ 
+}
